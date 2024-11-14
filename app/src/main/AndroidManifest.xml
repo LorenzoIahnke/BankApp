@@ -11,6 +11,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BancoApp"
-        tools:targetApi="31" />
+        tools:targetApi="31">
+        <activity
+            android:name=".EnviarPixActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListagemChavesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroChavesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExtratoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SacarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DepositarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardPixActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardContaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>

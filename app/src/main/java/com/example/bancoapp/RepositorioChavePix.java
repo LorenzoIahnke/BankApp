@@ -23,12 +23,14 @@ public class RepositorioChavePix extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(sql);
         Log.i("chave", "Tabela chave criada com sucesso!");
     }
+
     public void adicionarChave(ChavePix chavePix){
         String sql = "insert into chave values (null,'" + chavePix.tipoChave + "'," +
                 chavePix.chave + "'," + chavePix.transacao + ")";
         Log.i("chave", "SQL insert chave: " + sql);
         super.getWritableDatabase().execSQL(sql);
     }
+
     public List<ChavePix> listarChave(){
         ArrayList<ChavePix> listaChave = new ArrayList<>();
         String sql = "select * from chave";
