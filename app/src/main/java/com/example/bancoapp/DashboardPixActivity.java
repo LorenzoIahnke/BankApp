@@ -1,12 +1,10 @@
 package com.example.bancoapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class DashboardPixActivity extends AppCompatActivity {
 
@@ -16,4 +14,21 @@ public class DashboardPixActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard_pix);
 
     }
+
+    public void cadastrarRemoverChaves(View view) {
+        Intent intent = new Intent(this, CadastroChavesActivity.class);
+        startActivity(intent);
+    }
+
+    public void listarChaves(View view) {
+        Intent intent = new Intent(this, ListagemChavesActivity.class);
+        startActivity(intent);
+    }
+
+    public void transacaoPix(View view) {
+        Intent intent = new Intent(this, EnviarPixActivity.class);
+        startActivity(intent);
+    }
+
+
 }

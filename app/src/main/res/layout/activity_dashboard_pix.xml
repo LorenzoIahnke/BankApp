@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:layout_width="322dp"
-        android:layout_height="179dp"
+        android:layout_height="170dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,13 +24,15 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Cadastro/Remoção de Chaves" />
+            android:onClick="cadastrarRemoverChaves"
+            android:text="Cadastrar/Remover Chaves" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="listarChaves"
             android:text="Listagem de Chaves" />
 
         <Button
@@ -38,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="transacaoPix"
             android:text="Transação Enviar Pix" />
 
     </LinearLayout>

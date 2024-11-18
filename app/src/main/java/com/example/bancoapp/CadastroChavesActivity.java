@@ -1,12 +1,9 @@
 package com.example.bancoapp;
 
 import android.os.Bundle;
+import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class CadastroChavesActivity extends AppCompatActivity {
 
@@ -16,5 +13,11 @@ public class CadastroChavesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro_chaves);
 
 
+    }
+
+    public void cadastrarChave(View view) {
+    }
+
+    public void removerChave(View view) {
     }
 }

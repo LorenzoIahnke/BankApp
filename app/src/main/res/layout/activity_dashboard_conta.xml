@@ -24,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="depositar"
             android:text="Depositar" />
 
         <Button
@@ -31,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="sacar"
             android:text="Sacar" />
 
         <Button
@@ -38,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="verExtrato"
             android:text="Extrato" />
 
     </LinearLayout>

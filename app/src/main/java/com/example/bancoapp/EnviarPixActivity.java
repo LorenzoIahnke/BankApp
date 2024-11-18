@@ -1,12 +1,9 @@
 package com.example.bancoapp;
 
 import android.os.Bundle;
+import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class EnviarPixActivity extends AppCompatActivity {
 
@@ -16,5 +13,8 @@ public class EnviarPixActivity extends AppCompatActivity {
         setContentView(R.layout.activity_enviar_pix);
 
 
+    }
+
+    public void enviarPix(View view) {
     }
 }

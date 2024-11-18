@@ -1,12 +1,11 @@
 package com.example.bancoapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 public class DashboardContaActivity extends AppCompatActivity {
 
@@ -15,5 +14,20 @@ public class DashboardContaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_conta);
 
+    }
+
+    public void depositar(View view) {
+        Intent intent = new Intent(this, DepositarActivity.class);
+        startActivity(intent);
+    }
+
+    public void sacar(View view) {
+        Intent intent = new Intent(this, SacarActivity.class);
+        startActivity(intent);
+    }
+
+    public void verExtrato(View view) {
+        Intent intent = new Intent(this, ExtratoActivity.class);
+        startActivity(intent);
     }
 }
