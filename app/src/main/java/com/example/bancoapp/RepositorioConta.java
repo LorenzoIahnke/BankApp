@@ -26,8 +26,7 @@ public class RepositorioConta extends SQLiteOpenHelper{
     }
 
     public void adicionarValores(Conta conta){
-        String sql = "insert into conta values (null,'" + conta.deposito + "'," + conta.saque +
-                "'," + conta.saldo + ")";
+        String sql = "insert into conta values (null," + conta.deposito + "," + conta.saque + "," + conta.saldo + ")";
         Log.i("conta", "SQL insert conta: " + sql);
         super.getWritableDatabase().execSQL(sql);
     }

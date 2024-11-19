@@ -2,6 +2,7 @@ package com.example.bancoapp;
 
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Conta {
@@ -11,6 +12,9 @@ public class Conta {
     protected float saldo;
     private List<String> extrato;
 
+    public Conta() {
+        extrato = new ArrayList<>();
+    }
 
     public void depositar(float valor) {
         if (valor > 0) {
