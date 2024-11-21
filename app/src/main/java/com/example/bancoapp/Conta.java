@@ -1,7 +1,5 @@
 package com.example.bancoapp;
 
-import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +12,7 @@ public class Conta {
 
     public Conta() {
         extrato = new ArrayList<>();
+        saldo = 0;
     }
 
     public void depositar(float valor) {
@@ -33,5 +32,8 @@ public class Conta {
         }
     }
 
+    public float getSaldo() {
+        return saldo;
+    }
 }
 

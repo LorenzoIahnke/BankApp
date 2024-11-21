@@ -15,7 +15,6 @@ public class DepositarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_depositar);
         repositorioConta = new RepositorioConta(this);
-
     }
 
     public void depositar(View view) {
@@ -34,13 +33,14 @@ public class DepositarActivity extends AppCompatActivity {
                 return;
             }
 
-            Conta conta = new Conta();
-            conta.deposito = deposito;
-            conta.saldo += deposito;
+            // Carregar conta do banco
+            Conta conta = repositorioConta.carregarConta();
+            conta.depositar(deposito); // Usa a lógica encapsulada
             repositorioConta.adicionarValores(conta);
 
-            Toast.makeText(this, "Depósito de R$" + valorDeposito + " cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Depósito de R$" + valorDeposito + " realizado com sucesso!", Toast.LENGTH_SHORT).show();
             editTextDeposito.setText("");
+            finish();
         } catch (NumberFormatException e) {
             Toast.makeText(this, "Digite um valor válido!", Toast.LENGTH_SHORT).show();
         }

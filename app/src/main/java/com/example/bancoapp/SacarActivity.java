@@ -15,12 +15,12 @@ public class SacarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sacar);
         repositorioConta = new RepositorioConta(this);
-
     }
 
     public void sacar(View view) {
         EditText editTextSaque = findViewById(R.id.editTextSaque);
         String valorSaque = editTextSaque.getText().toString();
+
         if (valorSaque.isEmpty()) {
             Toast.makeText(this, "Digite um valor!", Toast.LENGTH_SHORT).show();
             return;
@@ -33,15 +33,16 @@ public class SacarActivity extends AppCompatActivity {
                 return;
             }
 
-            Conta conta = new Conta();
-            if (conta.sacar(saque)) {
-                conta.saque = saque;
-                repositorioConta.adicionarValores(conta); // Salva no banco
+            // Carregar conta do banco
+            Conta conta = repositorioConta.carregarConta();
+            if (conta.sacar(saque)) { // Usa a lógica encapsulada
+                repositorioConta.adicionarValores(conta);
                 Toast.makeText(this, "Saque de R$" + valorSaque + " realizado com sucesso!", Toast.LENGTH_SHORT).show();
+                editTextSaque.setText("");
+                finish();
             } else {
                 Toast.makeText(this, "Saldo insuficiente!", Toast.LENGTH_SHORT).show();
             }
-            editTextSaque.setText(""); // Limpa o campo
         } catch (NumberFormatException e) {
             Toast.makeText(this, "Digite um valor válido!", Toast.LENGTH_SHORT).show();
         }
